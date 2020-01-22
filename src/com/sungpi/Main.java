@@ -28,9 +28,26 @@ public class Main {
         group.add(Arrays.asList(1));
         group.add(Arrays.asList(1));
 
+//        int[] stones = {0,1,3,5,6,8,12,18};
+//        Solution403 solution403 = new Solution403();
+//        boolean ans = solution403.canCross(stones);
+//        System.out.println(ans);
 
-        Solution554 solution554 = new Solution554();
-        int ans = solution554.leastBricks(group);
+        ListNode l1 = new ListNode(1);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(5);
+
+        ListNode l2 = new ListNode(1);
+        l2.next = new ListNode(3);
+        l2.next.next = new ListNode(4);
+
+        ListNode l3 = new ListNode(2);
+        l3.next = new ListNode(6);
+
+        ListNode[] ls = {l1, l2, l3};
+        Solution23 solution23 = new Solution23();
+        ListNode ans = solution23.mergeKLists(ls);
         System.out.println(ans);
+
     }
 }
